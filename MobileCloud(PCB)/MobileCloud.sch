@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Mobile Cloud PCB"
 Date ""
-Rev "A"
+Rev "B"
 Comp "SDSU S.M.I.L.E. Lab"
 Comment1 ""
 Comment2 ""
@@ -829,31 +829,17 @@ Wire Wire Line
 Wire Wire Line
 	13700 6050 13550 6050
 Wire Wire Line
-	13550 6050 13550 8300
-Wire Wire Line
-	13550 8300 2100 8300
-Wire Wire Line
-	2100 8300 2100 5850
-Wire Wire Line
 	2100 5450 2550 5450
 Wire Wire Line
 	2550 5850 2100 5850
-Connection ~ 2100 5850
 Wire Wire Line
 	2100 5850 2100 5450
 Wire Wire Line
 	13700 5950 13450 5950
 Wire Wire Line
-	13450 5950 13450 8200
-Wire Wire Line
-	13450 8200 5550 8200
-Wire Wire Line
-	5550 8200 5550 5750
-Wire Wire Line
 	5550 5350 6150 5350
 Wire Wire Line
 	6150 5750 5550 5750
-Connection ~ 5550 5750
 Wire Wire Line
 	5550 5750 5550 5350
 Text Notes 13150 8450 0    98   ~ 0
@@ -861,42 +847,20 @@ PWM
 Wire Wire Line
 	13700 5850 13350 5850
 Wire Wire Line
-	13350 5850 13350 8100
-Wire Wire Line
-	13350 8100 2200 8100
-Wire Wire Line
-	2200 8100 2200 5650
-Wire Wire Line
 	2200 5250 2550 5250
 Wire Wire Line
 	2550 5650 2200 5650
-Connection ~ 2200 5650
-Wire Wire Line
-	2200 5650 2200 5250
 Wire Wire Line
 	13700 5750 13250 5750
-Wire Wire Line
-	13250 5750 13250 8000
-Wire Wire Line
-	13250 8000 2300 8000
-Wire Wire Line
-	2300 8000 2300 5750
 Wire Wire Line
 	2300 5350 2550 5350
 Wire Wire Line
 	2550 5750 2300 5750
-Connection ~ 2300 5750
 Wire Wire Line
 	2300 5750 2300 5350
 Wire Wire Line
 	3150 5050 3250 5050
 Connection ~ 3250 5050
-Wire Wire Line
-	13700 6150 13700 7900
-Wire Wire Line
-	13700 7900 5650 7900
-Wire Wire Line
-	5650 7900 5650 5550
 Wire Wire Line
 	5650 5150 6150 5150
 Wire Wire Line
@@ -911,23 +875,15 @@ Wire Wire Line
 Wire Wire Line
 	13700 5650 13150 5650
 Wire Wire Line
-	13150 5650 13150 7800
-Wire Wire Line
-	13150 7800 5750 7800
-Wire Wire Line
 	5750 5250 6150 5250
 Wire Wire Line
 	6150 5550 5650 5550
-Connection ~ 5650 5550
 Wire Wire Line
 	5650 5550 5650 5150
 Wire Wire Line
 	6150 5650 5750 5650
 Wire Wire Line
 	5750 5250 5750 5650
-Connection ~ 5750 5650
-Wire Wire Line
-	5750 5650 5750 7800
 $Comp
 L Connector_Generic:Conn_01x02 J10
 U 1 1 5E7BCEDB
@@ -1014,8 +970,6 @@ NoConn ~ 13700 5050
 NoConn ~ 13700 4950
 NoConn ~ 13700 5150
 NoConn ~ 13700 5250
-NoConn ~ 13700 4850
-NoConn ~ 13700 4750
 NoConn ~ 2950 6450
 NoConn ~ 13700 3750
 NoConn ~ 6450 6350
@@ -1306,4 +1260,65 @@ Wire Wire Line
 	9100 4450 8700 4450
 Connection ~ 8700 5850
 Connection ~ 8700 4450
+$Comp
+L Connector_Generic:Conn_01x02 J13
+U 1 1 5E5AA23A
+P 13350 4850
+F 0 "J13" H 13350 4950 50  0000 C CNN
+F 1 " " H 13268 4616 50  0000 C CNN
+F 2 "Connector_PinSocket_2.00mm:PinSocket_1x02_P2.00mm_Vertical" H 13350 4850 50  0001 C CNN
+F 3 "~" H 13350 4850 50  0001 C CNN
+	1    13350 4850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	13700 4750 13550 4750
+Wire Wire Line
+	13550 4850 13700 4850
+Wire Wire Line
+	2200 5250 2200 5650
+Wire Wire Line
+	13150 5650 13150 7800
+Wire Wire Line
+	5550 7800 5550 5750
+Wire Wire Line
+	5550 7800 13150 7800
+Connection ~ 5550 5750
+Wire Wire Line
+	13250 5750 13250 7900
+Wire Wire Line
+	13350 5850 13350 8000
+Wire Wire Line
+	13450 5950 13450 8100
+Wire Wire Line
+	2100 8100 2100 5850
+Wire Wire Line
+	2100 8100 13450 8100
+Connection ~ 2100 5850
+Wire Wire Line
+	13550 6050 13550 8200
+Wire Wire Line
+	13550 8200 2200 8200
+Wire Wire Line
+	2200 8200 2200 5650
+Connection ~ 2200 5650
+Wire Wire Line
+	13700 6150 13650 6150
+Wire Wire Line
+	13650 6150 13650 8300
+Wire Wire Line
+	13650 8300 2300 8300
+Wire Wire Line
+	2300 8300 2300 5750
+Connection ~ 2300 5750
+Wire Wire Line
+	5650 8000 5650 5550
+Wire Wire Line
+	5650 8000 13350 8000
+Connection ~ 5650 5550
+Wire Wire Line
+	5750 5650 5750 7900
+Wire Wire Line
+	5750 7900 13250 7900
+Connection ~ 5750 5650
 $EndSCHEMATC
