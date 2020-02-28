@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "Mobile Cloud PCB"
 Date ""
-Rev "A"
+Rev "B"
 Comp "SDSU S.M.I.L.E. Lab"
 Comment1 ""
 Comment2 ""
@@ -33,17 +33,6 @@ F 1 "RPM5.0-6.0" H 6700 3876 50  0000 C CNN
 F 2 "Converter_DCDC:Converter_DCDC_RECOM_RPMx.x-x.0" H 6750 2600 50  0001 C CNN
 F 3 "https://www.recom-power.com/pdf/Innoline/RPM-6.0.pdf" H 6675 3450 50  0001 C CNN
 	1    6700 3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDREF #PWR01
-U 1 1 5E3E001D
-P 3100 2250
-F 0 "#PWR01" H 3100 2000 50  0001 C CNN
-F 1 "GNDREF" H 3105 2077 50  0000 C CNN
-F 2 "" H 3100 2250 50  0001 C CNN
-F 3 "" H 3100 2250 50  0001 C CNN
-	1    3100 2250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -137,17 +126,6 @@ Wire Wire Line
 	7100 3100 7350 3100
 Wire Wire Line
 	7100 3300 7350 3300
-$Comp
-L Connector_Generic:Conn_01x02 J1
-U 1 1 5E400429
-P 2900 1950
-F 0 "J1" H 2900 1750 50  0000 C CNN
-F 1 " " H 2818 1716 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 2900 1950 50  0001 C CNN
-F 3 "~" H 2900 1950 50  0001 C CNN
-	1    2900 1950
-	-1   0    0    1   
-$EndComp
 $Comp
 L Device:D D1
 U 1 1 5E409987
@@ -565,12 +543,12 @@ NoConn ~ 11100 2600
 $Comp
 L power:GNDREF #PWR012
 U 1 1 5E54CEAB
-P 9250 2850
-F 0 "#PWR012" H 9250 2600 50  0001 C CNN
-F 1 "GNDREF" H 9255 2677 50  0000 C CNN
-F 2 "" H 9250 2850 50  0001 C CNN
-F 3 "" H 9250 2850 50  0001 C CNN
-	1    9250 2850
+P 9250 2950
+F 0 "#PWR012" H 9250 2700 50  0001 C CNN
+F 1 "GNDREF" H 9255 2777 50  0000 C CNN
+F 2 "" H 9250 2950 50  0001 C CNN
+F 3 "" H 9250 2950 50  0001 C CNN
+	1    9250 2950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -584,8 +562,6 @@ F 3 "~" H 10200 2450 50  0001 C CNN
 	1    10200 2450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10200 2800 10200 2600
 Wire Wire Line
 	11100 3200 11000 3200
 Wire Wire Line
@@ -659,17 +635,15 @@ Text Notes 4250 4100 0    197  ~ 0
 Text Notes 14550 5750 1    197  ~ 0
 ATMEGA328P
 Wire Wire Line
-	9250 2600 9250 2800
-Wire Wire Line
-	9550 2300 10200 2300
+	9550 2300 9700 2300
 Connection ~ 10200 2300
 Wire Wire Line
 	10200 2300 11100 2300
 Wire Wire Line
-	10200 2800 9250 2800
-Connection ~ 9250 2800
+	10200 2900 9700 2900
+Connection ~ 9250 2900
 Wire Wire Line
-	9250 2800 9250 2850
+	9250 2900 9250 2950
 Wire Wire Line
 	9450 7000 12300 7000
 Wire Wire Line
@@ -1026,8 +1000,6 @@ Wire Wire Line
 	8150 3200 8150 3400
 Wire Wire Line
 	8150 3200 8150 2300
-Wire Wire Line
-	8150 2300 8950 2300
 Connection ~ 8150 3200
 Wire Wire Line
 	8150 3200 8700 3200
@@ -1046,62 +1018,9 @@ Wire Wire Line
 	6300 3100 6000 3100
 Wire Wire Line
 	6000 3100 6000 1850
-Connection ~ 3100 2150
-Wire Wire Line
-	3100 2150 3100 1950
-Wire Wire Line
-	3100 2250 3100 2150
 Connection ~ 4850 1850
 Wire Wire Line
 	6000 1850 4850 1850
-Wire Wire Line
-	3650 2150 4450 2150
-Connection ~ 3650 1850
-Wire Wire Line
-	3950 1850 3650 1850
-Connection ~ 4450 1850
-Wire Wire Line
-	4250 1850 4450 1850
-Wire Wire Line
-	4450 1850 4850 1850
-$Comp
-L Device:Ferrite_Bead FB1
-U 1 1 5E3E8DA2
-P 4100 1850
-F 0 "FB1" V 3826 1850 50  0000 C CNN
-F 1 "Ferrite_Bead" V 3917 1850 50  0000 C CNN
-F 2 "Footprints:RESC1812X51N" V 4030 1850 50  0001 C CNN
-F 3 "~" H 4100 1850 50  0001 C CNN
-	1    4100 1850
-	0    1    1    0   
-$EndComp
-Connection ~ 3650 2150
-$Comp
-L Device:C C1
-U 1 1 5E3E8170
-P 3650 2000
-F 0 "C1" H 3765 2046 50  0000 L CNN
-F 1 "10nF" H 3765 1955 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 3688 1850 50  0001 C CNN
-F 3 "~" H 3650 2000 50  0001 C CNN
-	1    3650 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3100 2150 3650 2150
-Wire Wire Line
-	3100 1850 3650 1850
-$Comp
-L Device:C C2
-U 1 1 5E3E532D
-P 4450 2000
-F 0 "C2" H 4565 2046 50  0000 L CNN
-F 1 "10nF" H 4565 1955 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4488 1850 50  0001 C CNN
-F 3 "~" H 4450 2000 50  0001 C CNN
-	1    4450 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4850 2700 4850 1850
 NoConn ~ 6550 6350
@@ -1321,4 +1240,222 @@ Wire Wire Line
 Wire Wire Line
 	5750 7900 13250 7900
 Connection ~ 5750 5650
+$Comp
+L MobileCloud:Assmann_Heatsink_V7466 HS1
+U 1 1 5E5A7718
+P 7200 9050
+F 0 "HS1" H 7342 9089 50  0000 L CNN
+F 1 "Assmann_Heatsink_V7466" H 7342 8998 50  0000 L CNN
+F 2 "MobileCloud(PCB):V7466x_AssManHeatsink" H 7212 9000 50  0001 C CNN
+F 3 "~" H 7212 9000 50  0001 C CNN
+	1    7200 9050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0101
+U 1 1 5E5A80C8
+P 7200 9350
+F 0 "#PWR0101" H 7200 9100 50  0001 C CNN
+F 1 "GNDREF" H 7205 9177 50  0000 C CNN
+F 2 "" H 7200 9350 50  0001 C CNN
+F 3 "" H 7200 9350 50  0001 C CNN
+	1    7200 9350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 9350 7200 9250
+Wire Wire Line
+	7200 9250 7150 9250
+Wire Wire Line
+	7150 9250 7150 9150
+Wire Wire Line
+	7200 9250 7250 9250
+Wire Wire Line
+	7250 9250 7250 9150
+Connection ~ 7200 9250
+$Comp
+L Device:LED D17
+U 1 1 5E59448B
+P 2400 4700
+F 0 "D17" V 2439 4582 50  0000 R CNN
+F 1 "LED" V 2348 4582 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 2400 4700 50  0001 C CNN
+F 3 "~" H 2400 4700 50  0001 C CNN
+	1    2400 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R3
+U 1 1 5E596A3F
+P 2850 4550
+F 0 "R3" H 2782 4504 50  0000 R CNN
+F 1 "330" H 2782 4595 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2890 4540 50  0001 C CNN
+F 3 "~" H 2850 4550 50  0001 C CNN
+	1    2850 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDREF #PWR0102
+U 1 1 5E597BEC
+P 2400 4850
+F 0 "#PWR0102" H 2400 4600 50  0001 C CNN
+F 1 "GNDREF" H 2405 4677 50  0000 C CNN
+F 2 "" H 2400 4850 50  0001 C CNN
+F 3 "" H 2400 4850 50  0001 C CNN
+	1    2400 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 4550 2700 4550
+Wire Wire Line
+	3000 4550 3250 4550
+Connection ~ 3250 4550
+$Comp
+L Device:LED D18
+U 1 1 5E5B813E
+P 7850 2300
+F 0 "D18" H 7843 2516 50  0000 C CNN
+F 1 "LED" H 7843 2425 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 7850 2300 50  0001 C CNN
+F 3 "~" H 7850 2300 50  0001 C CNN
+	1    7850 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R4
+U 1 1 5E5B8C12
+P 7450 2450
+F 0 "R4" H 7382 2404 50  0000 R CNN
+F 1 "330" H 7382 2495 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7490 2440 50  0001 C CNN
+F 3 "~" H 7450 2450 50  0001 C CNN
+	1    7450 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GNDREF #PWR0103
+U 1 1 5E5B98A2
+P 7450 2600
+F 0 "#PWR0103" H 7450 2350 50  0001 C CNN
+F 1 "GNDREF" H 7455 2427 50  0000 C CNN
+F 2 "" H 7450 2600 50  0001 C CNN
+F 3 "" H 7450 2600 50  0001 C CNN
+	1    7450 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2300 7700 2300
+Wire Wire Line
+	8000 2300 8150 2300
+Connection ~ 8150 2300
+Wire Wire Line
+	8150 2300 8950 2300
+$Comp
+L Device:LED D19
+U 1 1 5E5D8CD1
+P 9700 2450
+F 0 "D19" V 9739 2333 50  0000 R CNN
+F 1 "LED" V 9648 2333 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 9700 2450 50  0001 C CNN
+F 3 "~" H 9700 2450 50  0001 C CNN
+	1    9700 2450
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9700 2300
+Wire Wire Line
+	9700 2300 10200 2300
+$Comp
+L Device:R_US R5
+U 1 1 5E5DA368
+P 9700 2750
+F 0 "R5" H 9632 2704 50  0000 R CNN
+F 1 "120" H 9632 2795 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9740 2740 50  0001 C CNN
+F 3 "~" H 9700 2750 50  0001 C CNN
+	1    9700 2750
+	1    0    0    -1  
+$EndComp
+Connection ~ 9700 2900
+Wire Wire Line
+	9700 2900 9250 2900
+Wire Wire Line
+	9250 2600 9250 2900
+Wire Wire Line
+	10200 2600 10200 2900
+$Comp
+L power:GNDREF #PWR01
+U 1 1 5E3E001D
+P 3100 2250
+F 0 "#PWR01" H 3100 2000 50  0001 C CNN
+F 1 "GNDREF" H 3105 2077 50  0000 C CNN
+F 2 "" H 3100 2250 50  0001 C CNN
+F 3 "" H 3100 2250 50  0001 C CNN
+	1    3100 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead FB1
+U 1 1 5E3E8DA2
+P 4100 1850
+F 0 "FB1" V 3826 1850 50  0000 C CNN
+F 1 "Ferrite_Bead" V 3917 1850 50  0000 C CNN
+F 2 "Footprints:RESC1812X51N" V 4030 1850 50  0001 C CNN
+F 3 "~" H 4100 1850 50  0001 C CNN
+	1    4100 1850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3650 2150 4450 2150
+Wire Wire Line
+	4450 1850 4850 1850
+Wire Wire Line
+	4250 1850 4450 1850
+Connection ~ 4450 1850
+$Comp
+L Device:C C2
+U 1 1 5E3E532D
+P 4450 2000
+F 0 "C2" H 4565 2046 50  0000 L CNN
+F 1 "10nF" H 4565 1955 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4488 1850 50  0001 C CNN
+F 3 "~" H 4450 2000 50  0001 C CNN
+	1    4450 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1850 3650 1850
+Wire Wire Line
+	3950 1850 3650 1850
+Connection ~ 3650 1850
+$Comp
+L Device:C C1
+U 1 1 5E3E8170
+P 3650 2000
+F 0 "C1" H 3765 2046 50  0000 L CNN
+F 1 "10nF" H 3765 1955 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 3688 1850 50  0001 C CNN
+F 3 "~" H 3650 2000 50  0001 C CNN
+	1    3650 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2250 3100 2150
+Connection ~ 3650 2150
+Wire Wire Line
+	3100 2150 3650 2150
+Connection ~ 3100 2150
+Wire Wire Line
+	3100 2150 3100 1950
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5E400429
+P 2900 1850
+F 0 "J1" H 2900 1650 50  0000 C CNN
+F 1 " " H 2818 1616 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 2900 1850 50  0001 C CNN
+F 3 "~" H 2900 1850 50  0001 C CNN
+	1    2900 1850
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
