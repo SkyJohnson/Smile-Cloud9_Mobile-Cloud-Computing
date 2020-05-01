@@ -31,6 +31,8 @@ while 1:
 		time_start2 = time.time()
 		rec = time_start2 - time_start1
 		#print('Recieve time:', (rec))
+		
+		#IF TRANSMISSION IS OVER END THE PROGRAM
 		if vect == b'Finish':
 			time_end = time.time()
 			time_total = time_end - time_start
@@ -45,7 +47,7 @@ while 1:
 		
 		print(len(rdata))
 		if len(rdata) < len(Zero_Matrix):
-			rarray = Zero_Matrix
+			rarray = Zero_Matrix #IF BYTES ARE MISSING, REPLACE THE WHOLE LINE WITH A ZERO MATRIX
 			zero_count = zero_count + 1
 		else:
 			rarray = np.array([rdata])
