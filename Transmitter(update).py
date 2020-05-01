@@ -16,6 +16,7 @@ counter = 0
 sent = 0
 recieved = 1
 
+#CREATE A RANDOM MATRIX BASED OFF IMAGE SIZES
 #pic = np.random.randint(0,255, size=(20,20), dtype=np.uint8)
 pic = np.random.randint(0,255, size=(256,144), dtype=np.uint8)
 #pic = np.random.randint(0,255, size=(480,360))
@@ -30,7 +31,7 @@ time_start = time.time()
 #print(pic)
 
 
-
+#READ EACH ROW IN THE MATRIX, CONVERT IT TO BYTES, TRANSMIT 
 for row in pic:
     #list_row = list(row)
     data = bytearray(row)
