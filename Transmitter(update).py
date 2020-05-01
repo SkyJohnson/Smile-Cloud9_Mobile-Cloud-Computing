@@ -39,7 +39,7 @@ for row in pic:
     print(len(data))
     #ser.write(str.encode(row))
     ser.write(data)
-    time.sleep(.01)
+    time.sleep(.1)
 ser.write(str.encode('Finish'))
     
 time_end = time.time()
